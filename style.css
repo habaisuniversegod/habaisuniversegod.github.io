@@ -1,0 +1,24 @@
+header {
+	background-color: #222;
+	position: absolute;
+	top: 0; left: 0;
+	width: 100%;
+}
+
+h1 {
+	text-align: center;
+	color: #aaa;
+	font-family: 'Roboto', sans-serif;
+	font-size: 25px;
+}
+
+.page-content {
+	font-family: 'Raleway', sans-serif;
+	margin-top: 7%;
+	text-align: center;
+	background-color: #eee;
+}
+
+p {
+	padding: 10px;
+}
