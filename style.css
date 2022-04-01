@@ -22,3 +22,7 @@ h1 {
 p {
 	padding: 10px;
 }
+
+a, li {
+	padding: 3px;
+}
