@@ -1,0 +1,11 @@
+.page {
+	text-align: center;
+}
+
+#result, a {
+	font-size: 24px;
+}
+
+#verdict {
+	font-size: 36px;
+}
