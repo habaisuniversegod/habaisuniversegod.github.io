@@ -1,0 +1,42 @@
+.page {
+	text-align: center;
+}
+
+#result, #res-a {
+	font-size: 24px;
+}
+
+#verdict {
+	font-size: 36px;
+}
+
+#age {
+	font-size: 24px;
+}
+
+button {
+	margin: 25px auto;
+}
+
+footer {
+	background-color: #222;
+	color: white;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	text-align: left;
+	padding-left: 10px;
+}
+
+.fields {
+	width: 40%;
+	margin: 40px auto;
+	padding: 25px;
+	border: 2px solid blue;
+	background-color: #eef;
+}
+
+#description {
+	text-align: left;
+	margin: 20px;
+}

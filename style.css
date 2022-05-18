@@ -26,3 +26,6 @@ p {
 a, li {
 	padding: 3px;
 }
+.list {
+	padding-bottom: 20px;
+}
