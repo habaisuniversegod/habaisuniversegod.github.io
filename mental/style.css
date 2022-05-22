@@ -1,42 +1,107 @@
+h1 {
+	font-family: 'Comfortaa', cursive;
+	font-width: 700;
+	font-size: 48px;
+}
+
+p, a {
+	font-family: 'Mulish', sans-serif;
+	font-width: 300;
+	font-size: 20px;
+}
+
+
+.hover-txt {
+	color: #ffffff;
+	transition: color 0.4s;
+}
+
+.hover-txt:hover {
+	color: #1a5ae9;
+}
+
+footer > p > a {
+	color: white;
+	transition: color 0.4s;
+	font-size: 17px;
+}
+
+a:hover {
+	color: #ff4747;
+}
+
+
+body {
+	background-color: #DDE7FF;
+	background-image: url("images/background.png");
+}
+
 .page {
-	text-align: center;
+	text-align: center; 
+}
+
+pre {
+	font-family: 'Podkova', serif;
+	font-size: 18px;
+}
+
+input[type="text"], select, option {
+	font-family: 'Podkova', serif;
+	font-size: 18px;
+	width: 17em;
+	height: 1.5em;
+} 
+
+button {
+	margin: 25px auto;
+	width: auto;
+	height: 2em;
+	font-family: 'Podkova', serif;
+	font-size: 28px;
+}
+
+.footer-text {
+	font-size: 17px;
 }
 
 #result, #res-a {
 	font-size: 24px;
+	color: #000000;
+	transition: color 0.4s;
+}
+
+#res-a:hover {
+	color: #ff4747;
 }
 
 #verdict {
-	font-size: 36px;
+	font-size: 32px;
 }
 
 #age {
 	font-size: 24px;
 }
 
-button {
-	margin: 25px auto;
-}
-
 footer {
 	background-color: #222;
 	color: white;
-	position: absolute;
 	bottom: 0;
 	width: 100%;
 	text-align: left;
-	padding-left: 10px;
+	padding: 3px 0 3px 10px;
 }
 
 .fields {
 	width: 40%;
 	margin: 40px auto;
 	padding: 25px;
-	border: 2px solid blue;
-	background-color: #eef;
+	border: 2px solid #DD8D46;
+	background-color: #FFE6C4;
+	background-image: url("images/background2.png");
+	min-width: 365px;
 }
 
-#description {
-	text-align: left;
-	margin: 20px;
+#image {
+	border: 2px black solid;
+	font-family: 'Podkova', serif;
 }
