@@ -13,5 +13,12 @@
 			<p id='result' title="Подожди, блять!"><b>Результат будет готов через <span id="counter">20</span> секунд...</b></p>
 		</div>
 		<script type="text/javascript" src='timer.js'></script>
+		<script type="text/javascript">
+			function randomNumber(min, max){
+				return Math.floor(Math.random() * (max - min) + min)
+			}
+			sessionStorage.setItem('result', randomNumber(1, 30));
+			console.log(sessionStorage.getItem('result'))
+		</script>
 	</body>
 </html>

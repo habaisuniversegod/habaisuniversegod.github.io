@@ -11,6 +11,8 @@ function count(){
 	counter.innerHTML = time;
 	if (time == 0){
 		result.outerHTML = "<a href='result.html' id='res-a' title='Тыкай!'><b>Посмотреть результат</b></a>";
+		clearInterval(headerAnimTimer);
+		header.innerHTML = "Загрузили";
 	}
 }
 
