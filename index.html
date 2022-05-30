@@ -8,7 +8,20 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@500&display=swap" rel="stylesheet">
 		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-		<script type="text/javascript">function navOpen(){ document.getElementById("nav-menu").style.left = "0"};function navClose(){ document.getElementById("nav-menu").style.left = "-400px"}</script>
+		<script type="text/javascript">
+		function navOpen(){ 
+			let timer = setTimeout(overlayShow, 5); // задержка нужна чтобы сработал transition
+			document.getElementById("nav-menu").style.left = "0";
+			document.getElementById("bg-shading").style.display = "block";
+		}
+		function navClose(){ 
+			let timer = setTimeout(overlayHide, 300); // а тут чтобы блок исчез когда станет прозрачным а то будет мешать нажимать
+			document.getElementById("nav-menu").style.left = "-400px"
+			document.getElementById("bg-shading").style.backgroundColor = "rgba(0, 0, 0, 0.0)";
+		}
+		function overlayHide(){document.getElementById("bg-shading").style.display = "none";}
+		function overlayShow(){document.getElementById("bg-shading").style.backgroundColor = "rgba(0, 0, 0, 0.35)";}
+	</script>
 	</head>
 	<body>
 		<header>
@@ -17,11 +30,12 @@
 		</header>
 		<div class="page-content">
 			<aside id="nav-menu">
-				<p>Список сайтов: </p>
+				<p id='title'>Список сайтов: </p>
 				<a href="#" onclick="return navClose();" class="icon" title="Закрыть">B</a>
 				<ul>
 					<li><a href="mental/index.html">Mental - Ваше настоящее лицо</a></li>
 				</ul>
+				<p id='nav-footer'>habaisuniversegod   2022</p>
 			</aside>
 			<div class="text">
 				<p>Из <span class="hover-txt">readme.md</span> репозитория <a href="https://github.com/habaisuniversegod/habaisuniversegod.github.io">GitHub</a>, где хостится сайт</p>
@@ -39,16 +53,15 @@
 			<hr>
 			<div class="sn">
 				<p>Все мои соцсети: </p>
-				<ul>
-					<li><a href="https://vk.com/habalyn228">VK - https://vk.com/habalyn228</a></li>
-					<li><a href="https://youtube.com/c/orpers06">YouTube - https://youtube.com/c/orpers06</a></li>
-					<li><a href="https://tiktok.com/@sanitar.anonimus1227">TikTok - https://tiktok.com/@sanitar.anonimus1227</a></li>
-					<li><a href="https://github.com/habaisuniversegod">GitHub - https://github.com/habaisuniversegod</a></li>
-					<li><a href="https://reddit.com/u/monoantimony51">Reddit - https://reddit.com/u/monoantimony51</a></li>
-					<li><a href="https://steamcommunity.com/profiles/76561199034191177">Steam - https://steamcommunity.com/profiles/76561199034191177</a></li>
-					<li><a href="https://discord.gg/s7cFqnneDN">Discord - https://discord.gg/s7cFqnneDN</a> или <span class="hover-txt">habaisuniversegod#2406</span></li>
-				</ul>
+					<a href="https://vk.com/habalyn228"><img src="ic_01.png" title="VK"></a>
+					<a href="https://youtube.com/c/orpers06"><img src="ic_02.png" title="YouTube"></a>
+					<a href="https://tiktok.com/@sanitar.anonimus1227"><img src="ic_03.png" title="TikTok"></a>
+					<a href="https://github.com/habaisuniversegod"><img src="ic_04.png" title="GitHub"></a>
+					<a href="https://reddit.com/u/monoantimony51"><img src="ic_05.png" title="Reddit"></a>
+					<a href="https://steamcommunity.com/profiles/76561199034191177"><img src="ic_06.png" title="Steam"></a>
+					<a href="https://discord.gg/s7cFqnneDN"><img src="ic_07.png" title="Discord Server"></a>
 			</div>
 		</div>
+		<canvas id="bg-shading"></canvas>
 	</body>
 </html>
