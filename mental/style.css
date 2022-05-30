@@ -8,6 +8,7 @@ p, a {
 	font-family: 'Mulish', sans-serif;
 	font-width: 300;
 	font-size: 20px;
+	text-decoration: none;
 }
 
 
@@ -30,10 +31,14 @@ a:hover {
 	color: #ff4747;
 }
 
+html {
+	scroll-behavior: smooth;
+}
 
 body {
 	background-color: #DDE7FF;
 	background-image: url("images/background.png");
+	background-position: 0 0px;
 }
 
 .page {

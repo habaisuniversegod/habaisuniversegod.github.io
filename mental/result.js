@@ -64,7 +64,9 @@ let age = document.getElementById('age');
 let description = document.getElementById('description');
 
 
+
 image.outerHTML = "<img src=images/"+imageID+".jpg width=35% id='image' alt='Если пикчи нет, проверь инет, мудень!'>";
 verdict.outerHTML = "<p id='verdict'><b>Вы - "+names[imageID]+"</b></p>";
 age.outerHTML = "<p id='age'><b>Ваш психологический возраст: "+ages[imageID]+"</b></p>";
 description.outerHTML = "<p class='description'>"+descriptions[imageID]+"</p>";
+document.getElementsByTagName('title')[0].innerHTML = "Вы - "+names[imageID];
