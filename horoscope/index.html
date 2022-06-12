@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Самый точный гороскоп</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript">
+			let i = 0
+			let dir = [Math.random(), Math.random()];
+
+			function moveBg(){
+				document.getElementsByTagName('html')[0].style.backgroundPosition = i*dir[0]+"px "+i*dir[1]+"px";
+				i++;
+			}
+
+			let timer = setInterval(() => moveBg(), 50)
+		</script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Neucha&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<h1>Самый точный гороскоп в мире!</h1>
+		<img src="images/t1.jpeg" width="40%" class="main-pg-img">
+		<p>Данный гороскоп основан на научно-потверждённых данных о движении и положении астрономических объектов (планет, спутников, звёзд). Эти данные собраны в ходе многочисленных исследований (в том числе и наших). Мы уверены, что прогноз, который мы вам дадим, действительно окажется правдивым. Чтобы узнать ваш прогноз, достаточно просто выбрать ваш знак зодиака в специальном поле и мы дадим вам прогноз!</p>
+			<select id='zodiac'>
+				<option>Выберите знак зодиака</option>
+				<option>Овен</option>
+				<option>Телец</option>
+				<option>Близнецы</option>
+				<option>Рак</option>
+				<option>Лев</option>
+				<option>Дева</option>
+				<option>Весы</option>
+				<option>Скорпион</option>
+				<option>Стрелец</option>
+				<option>Козерог</option>
+				<option>Водолей</option>
+				<option>Рыбы</option>
+			</select>
+		<form onsubmit="zodiacalSign();return false" id='submitdata'>
+			<button>Потвердить</button>
+		</form>
+
+		<script type="text/javascript">
+			function zodiacalSign(){
+				let selected = document.getElementById('zodiac').selectedIndex;
+				console.log(selected)
+				if (selected == 0) {
+					alert('Слышь, выбери знак зодиака, дудель энцефалитный!');
+				}
+				else {
+					sessionStorage.setItem('sign', selected)
+					setTimeout("window.location.href = 'waiting.html'", 100)
+				}
+				
+			}
+		</script>
+		<footer>
+			<p class="footer-text">Главная страница - <a href="https://habaisuniversegod.github.io/">https://habaisuniversegod.github.io</a><br>
+			По вопросам писать - <span class="hover-txt">habalyn228@outlook.com</span><br>
+			Данный сайт не собирает ваши конфиденциальные данные. Не воспринимайте сайт всерьёз!</p>
+		</footer>
+	</body>
+</html>
