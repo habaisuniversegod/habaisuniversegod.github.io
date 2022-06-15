@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<link rel="preconnect" href="https://fonts.googleapis.com">
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@500&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
 		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
 		<script type="text/javascript">
 		function navOpen(){ 
@@ -15,7 +15,7 @@
 			document.getElementById("bg-shading").style.display = "block";
 		}
 		function navClose(){ 
-			let timer = setTimeout(overlayHide, 300); // а тут чтобы блок исчез когда станет прозрачным а то будет мешать нажимать
+			let timer = setTimeout(overlayHide, 400); // а тут чтобы блок исчез когда станет прозрачным а то будет мешать нажимать
 			document.getElementById("nav-menu").style.left = "-400px"
 			document.getElementById("bg-shading").style.backgroundColor = "rgba(0, 0, 0, 0.0)";
 		}

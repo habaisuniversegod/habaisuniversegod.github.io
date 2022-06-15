@@ -7,9 +7,10 @@ header {
 
 h1 {
 	text-align: center;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 600;
 	color: #fff;
-	font-family: 'Roboto', sans-serif;
-	font-size: 25px;
+	font-size: 24px;
 }
 
 .page-content {
@@ -17,12 +18,13 @@ h1 {
 	margin-top: 75px;
 }
 
-p {
+p, a, li {
 	padding: 3px;
+	font-size: 18px;
 }
 
-a, li {
-	padding: 3px;
+p {
+	margin: 0.25em 0;
 }
 
 aside {
@@ -31,7 +33,7 @@ aside {
 	left: -400px;
 	top: 0;
 	height: 100%;
-	transition: left 0.3s ease-in-out;
+	transition: left 0.4s ease-in-out;
 	z-index: 2;
 	background-color: #f7f7f7;
 	color: white;
@@ -57,7 +59,7 @@ aside {
 aside > #title {
 	font-size: 24px;
 	margin: 0;
-	padding: 17px 0 18px 10px;
+	padding: 16px 0 16px 10px;
 	font-weight: 600;
 	background-color: #333;
 }
@@ -77,10 +79,16 @@ aside > ul > li {
 	border-bottom: 1px solid #666666;
 	padding: 10px;
 	margin-left: -40px;
+	background-color: inherit;
+	transition: background-color 0.4s ease-in-out;
+}
+
+aside > ul > li:hover {
+	background-color: #e5e5e5;
 }
 
 .hover-txt:hover, a:hover {
-	color: #cb2121;
+	color: #e34545;
 }
 
 @font-face {
@@ -119,7 +127,7 @@ aside > .icon {
 	position: absolute;
 	z-index: 1;
 	background-color: rgba(0, 0, 0, 0.0);
-	transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.4s ease-in-out;
 }
 
 #nav-footer {
