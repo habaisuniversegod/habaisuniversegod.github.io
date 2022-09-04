@@ -1,0 +1,120 @@
+html {
+	background-image: url('images/bg.png');
+	transition: background-position 0.55s;
+}
+
+body {
+	text-align: center;
+	margin-top: 0px;
+}
+
+p, h1, a, li {
+	color: white;
+}
+
+li::before {
+	content: "♦  ";
+	color: red;
+}
+
+a {
+	transition: all 0.4s ease-in-out;
+	text-decoration: none;
+}
+
+h1 {
+	font-family: 'Bellota', cursive;
+	font-size: 48px;
+	margin: 0px auto 15px auto;
+}
+
+p, a, li {
+	font-family: 'Neucha', cursive;
+	font-size: 24px;
+	list-style-type: none;
+}
+
+p {
+	margin: 20px auto;
+}
+
+.main-pg-img {
+	border: 2px solid black;
+}
+
+select {
+	font-size: 24px;
+	color: white;
+	font-family: 'Neucha', cursive;
+	height: 1.7em;
+	width: auto;
+	background-color: #111;
+	transition: all 0.4s ease-in-out;
+	cursor: pointer;
+	border: 1px #ccc solid;
+}
+
+select:hover {
+	background-color: #c55;
+}
+
+option {
+	background-color: #111;
+}
+
+button {
+	cursor: pointer;
+	font-size: 24px;
+	color: white;
+	background-color: #111;
+	font-family: 'Neucha', cursive;
+	margin: 25px auto;
+	width: 5em;
+	height: 1.5em;
+	transition: all 0.4s ease-in-out;
+	border: 1px #ccc solid;
+}
+
+button:hover {
+	background-color: #c55;
+}
+
+a:hover {
+	color: #c55;
+}
+
+#image {
+	background-color: rgba(0, 0, 0, 0.45);
+	border: 3px solid black;
+}
+
+ul {
+	margin-top: 0;
+	text-align: left;
+}
+
+.hzkak {
+	margin-bottom: 0;
+	text-align: left;
+	margin-left: 40px;
+}
+
+.return {
+	padding-bottom: 30px;
+}
+
+footer {
+	background-color: #131313;
+	width: 100%;
+	margin-top: 40px;
+	text-align: left;
+	padding: 3px 0 3px 9px;
+}
+
+.hover-txt {
+	transition: all 0.4s ease-in-out;
+}
+
+.hover-txt:hover {
+	color: #33b;
+}

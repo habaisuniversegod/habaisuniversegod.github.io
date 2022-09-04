@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Bellota:wght@700&family=Neucha&display=swap" rel="stylesheet">
+		<title>Ваш прогноз</title>
+		<script type="text/javascript">
+			let i = 0
+			let dir = [Math.random(), Math.random()];
+
+			function moveBg(){
+				document.getElementsByTagName('html')[0].style.backgroundPosition = i*dir[0]+"px "+i*dir[1]+"px";
+				i++;
+			}
+
+			let timer = setInterval(() => moveBg(), 50)
+		</script>
+	</head>
+	<body>
+		<h1>Итак, прогноз для знака зодиака <span id='sign'>undefined</span></h1>
+		<img src="images/z_0.png" width='25%' id='image'>
+		<p>Положение планет, звёзд, спутников, чёрных дыр, пульсаров, галактик, квазаров, сверхновых, туманностей, астероидов, комет, созвездий, космической пыли и прочей космической лабуды <b>вообще никак не повлияет</b> на вашу жизнь, судьбу, будущее, семью. Главное - алкоголь фу, сигареты фу, <s>нар</s>котики фу. Не совершайте рискованных поступков, не нарывайтесь, не лезьте туда, где нихуя не разбираетесь <span id='Не гарантируем!'>и все у вас будет охуенно.</span></p>
+		<p class='hzkak'>Известные люди, родившиеся под этим знаком:</p>
+		<ul>
+			<script type="text/javascript" src="result.js"></script>
+		</ul>
+		<a href="index.html" class='return'>Вернуться назад</a>
+	</body>
+</html>
