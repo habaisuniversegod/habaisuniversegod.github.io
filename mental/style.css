@@ -11,6 +11,24 @@ p, a {
 	text-decoration: none;
 }
 
+a {
+	position: relative;
+}
+
+a:after {
+	content: "";
+	background-color: rgba(255, 71, 71, 0);
+	position: absolute;
+	bottom: -0.05em;
+	left: 0%;
+	width: 100%;
+	height: 1px;
+	transition: all 0.4s ease-out;
+}
+
+a:hover:after {
+	background-color: rgba(255, 71, 71, 1);
+}
 
 .hover-txt {
 	color: #ffffff;
@@ -46,12 +64,12 @@ body {
 }
 
 pre {
-	font-family: 'Podkova', serif;
+	font-family: 'Jura', sans-serif;
 	font-size: 18px;
 }
 
 input[type="text"], select, option {
-	font-family: 'Podkova', serif;
+	font-family: 'Jura', sans-serif;
 	font-size: 18px;
 	width: 17em;
 	height: 1.5em;
@@ -61,7 +79,7 @@ button {
 	margin: 25px auto;
 	width: auto;
 	height: 2em;
-	font-family: 'Podkova', serif;
+	font-family: 'Jura', sans-serif;
 	font-size: 28px;
 }
 
@@ -73,10 +91,28 @@ button {
 	font-size: 24px;
 	color: #000000;
 	transition: color 0.4s;
+	position: relative;
+}
+
+#res-a::after {
+	content: "";
+	background: #ff4747;
+	z-index: -1;
+	position: absolute;
+	top: 0.1em;
+	left: -2.5%;
+	width: 0%;
+	height: 1.2em;
+	transition: width 0.4s;
+	
 }
 
 #res-a:hover {
-	color: #ff4747;
+	color: white;
+}
+
+#res-a:hover::after {
+	width: 105%;
 }
 
 #verdict {
@@ -108,5 +144,5 @@ footer {
 
 #image {
 	border: 2px black solid;
-	font-family: 'Podkova', serif;
+	font-family: 'Jura', sans-serif;
 }

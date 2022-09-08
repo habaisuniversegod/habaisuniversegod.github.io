@@ -17,7 +17,7 @@ function count(){
 		result.outerHTML = "<a href='result.html' id='res-a' title='Тыкай!'><b>Посмотреть результат</b></a>";
 		clearInterval(headerAnimTimer);
 		header.innerHTML = "Загрузили";
-		sessionStorage.setItem('result', randomNumber(1, 45));
+		sessionStorage.setItem('result', randomNumber(1, 51));
 	}
 }
 
