@@ -7,7 +7,7 @@ body {
 	background: url('bg2.png') no-repeat, url('bg1.png') no-repeat;
 	background-position: -100px 215px, center;
 	background-size: cover;
-	min-height: 100vh;
+	min-height: 640px;
 	transition: background-position 0.05s;
 }
 
@@ -97,12 +97,4 @@ html {
 .footer > a:hover {
 	color: #de4433;
 	cursor: pointer;
-}
-
-#easter {
-	position: absolute;
-	top: 0;
-	left: 0;
-	min-width: 10px;
-	min-height: 10px;
 }
