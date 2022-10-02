@@ -1,120 +1,100 @@
-header {
-	background-color: #222;
-	position: relative;
-	overflow: hidden;
+body {
+	margin: 0;
 }
 
-.nav-links {
+.title {
+	position: relative;
+	background: url('bg2.png') no-repeat, url('bg1.png') no-repeat;
+	background-position: -100px 215px, center;
+	background-size: cover;
+	min-height: 640px;
+	transition: background-position 0.05s;
+}
+
+.head {
+	position: absolute;
+	left: 0;
+	top: 35%;
+	width: 100%;
 	text-align: center;
-	padding: 15px;
 }
 
-.nav-links > a, .nav-links > span {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
-	font-size: 24px;
-	color: #fff;
-	text-decoration: none;
-	margin: 0 4%;
-	transition: all 0.3s ease-in-out;
-	position: relative;
-	
+.head > p {
+	font-family: "Century Gothic", sans-serif;
+	color: white;
+	font-size: 66px;
+	font-weight: 500;
+	margin: 0;
+	letter-spacing: 10px;
+	transition: all 0.3s ease-in-out
 }
 
-.nav-links > span {
-	color: #ccc;
-	text-shadow: 0 0 10px rgba(204, 204, 204, 0.5);
+.head > p:hover {
+	letter-spacing: 25px;
 }
 
-.nav-links > span:after {
-	content: "";
-	background: #ccc;
-	position: absolute;
-	bottom: -15px;
-	left: 0;
-	width: 100%;
-	height: 4px;
+.text-block {
+	color: white;
+	background-color: #222;
+	padding: 25px 15px;
 }
 
-.nav-links > a:hover {
-	text-shadow: 0 0 10px #e34545;
-	margin: 0 6%;
-}
-
-.nav-links > a:after {
-	content: "";
-	background: #e34545;
-	position: absolute;
-	bottom: -12px;
-	left: 0;
-	width: 0%;
-	height: 4px;
-	transition: width 200ms ease-out;
-}
-
-.nav-links > a:hover:after {
-	width: 100%;
-}
-
-.page-content {
-	font-family: 'Raleway', sans-serif;
-	margin-top: 15px;
-}
-
-p, a, li {
-	padding: 3px;
-	font-size: 20px;
-	color: #000;
-	transition: color 0.4s ease-in-out;
-}
-
-p {
-	margin: 0.35em 0;
-}
-
-.hover-txt, a {
-	color: #000;
-	transition: color 0.4s;
-}
-
-.hover-txt:hover, a:hover {
-	color: #e34545;
+.text-block > p, .text-block > a {
+	font-family: 'Jost', sans-serif;
+	font-size: 18px;
+	text-align: justify;
+	margin: 0;
 }
 
 h2 {
-	font-family: 'Raleway', sans-serif;
-	font-weight: 600;
-	font-size: 24px;
-	padding-bottom: 10px;
+	font-family: 'Exo 2', sans-serif;
+	font-size: 26px;
+	margin: 5px 0 15px 0;
 }
 
-q::before {
-	content: '• '
+.rate {
+	position: relative;
+	min-height: 60vh;
+	width: 100%;
+	text-align: center;
 }
 
-.side-img {
-	float: right;
-	margin-top: -20px;
+.stars {
+	margin: 0;
+	position: absolute;
+	left: 0;
+	top: 20%;
+	text-align: center;
+	width: 100%;
+	background-color: black;
 }
 
-.a-list > a {
-	text-decoration: none;
-	border-left: 0px solid black;
-	transition: all 0.3s ease-in-out;
+.stars > p {
+	font-family: 'Jost', sans-serif;
+	font-size: 28px;
+	text-align: center;
+	margin: 0;
+	color: white;
 }
 
-.a-list > a:hover {
-	font-size: 24px;
-	border-left-width: 100px;
-	border-left-color: #e34545; 
+.stars > span {
+	margin: 3px;
+	padding: 0px;
+	font-size: 62px;
+	color: #202027;
+	transition: color 0.15s;
+	cursor: pointer;
 }
 
-.a-list > a > img {
-	width: 0;
-	vertical-align: top;
-	transition: all 0.3s ease-in-out;
+html {
+	background-color: black;
 }
 
-.a-list > a:hover > img {
-	width: 30%;
+.footer {
+	color: #777;
+}
+
+.footer > a:hover {
+	color: #de4433;
+	cursor: pointer;
 }
