@@ -5,7 +5,7 @@ let verdict = document.getElementById("verdict");
 let age = document.getElementById('age');
 let description = document.getElementById('description');
 
-if (imageID > 50){
+if (imageID > 51){
   image.outerHTML = "<img src='images/mudak.png' width=35% id='image' alt='Мудак!'>";
    verdict.outerHTML = "<p id='verdict'><b>Чмо ебаное, блять!</b></p>";
    age.outerHTML = "<p id='age'><b>Ты думаешь что дохуя умный?</b></p>";
