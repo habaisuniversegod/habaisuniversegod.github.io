@@ -1,3 +1,7 @@
+body {
+	margin: 0;
+}
+
 header {
 	background-color: #222;
 	position: relative;
@@ -58,7 +62,7 @@ header {
 
 .page-content {
 	font-family: 'Raleway', sans-serif;
-	margin-top: 15px;
+	margin: 15px 0 0 5px;
 }
 
 p, a, li {
@@ -117,4 +121,15 @@ q::before {
 
 .a-list > a:hover > img {
 	width: 30%;
+}
+
+.dzhigitovka {
+	width: 100vw;
+	height: 100vh;
+	text-align: center;
+}
+
+.dzhigitovka > h2 {
+	font-size: 100px;
+	margin: 48% auto;
 }

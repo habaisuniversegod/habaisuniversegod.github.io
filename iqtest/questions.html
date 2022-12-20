@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>IQ-тест</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo+2:wght@700&family=Rubik:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <script>
+            sessionStorage.setItem('replies', '')
+        </script>
+        <div class="form">
+            <p id="q-number"><b>Вопрос: 1 / 10</b></p>
+            <h2 id="question">Lorem ipsum</h2>
+            <div class="buttons">
+                <div class="button" onclick="newQuestion(1)"><a>Да</a></div>
+                <div class="button" onclick="newQuestion(2)"><a>Скорее да, чем нет</a></div>
+                <div class="button" onclick="newQuestion(3)"><a>50 на 50</a></div>
+                <div class="button" onclick="newQuestion(4)"><a>Скорее нет, чем да</a></div>
+                <div class="button" onclick="newQuestion(5)"><a>Нет</a></div>
+                <a href="index.html">Вернуться на главную</a>
+            </div>
+            
+        </div>
+        <div class="loading">
+            <div class="loading-title">
+                <h2>Загрузка...</h2>
+            </div>
+            <div class="anim">
+                <div class="element" id="e1"></div>
+                <div class="element" id="e2"></div>
+                <div class="element" id="e3"></div>
+            </div>
+        </div>
+        <script>
+            let id = 1;
+            const questions = ['Поддерживаете ли вы ЛГБТ?',
+            'Поддерживаете ли вы феминисток?',
+            'Уважаете ли вы Билли Херингтона?',
+            'Вы любите, когда волосатые мужики обмазываются маслом?',
+            'Вы любите маму?',
+            'Смотрите ли вы ТикТок?',
+            'Вы снимаете видео для ТикТока?',
+            'Вы держите/держали Недрочабрь?',
+            'Смотрите ли вы Аниме?',
+            'Что такое доброта?'];
+            const idElement = document.getElementById('q-number');
+            const questionElement = document.getElementById('question');
+            const loadingScreen = document.getElementsByClassName('loading')[0];
+            
+            idElement.innerHTML = "<b>Вопрос: 1 / 10</b>";
+            questionElement.innerHTML = questions[0];
+
+            function newQuestion(selected){
+                id++;
+                let question = questions[id - 1]; 
+                let ssItem = sessionStorage.getItem('replies');
+                sessionStorage.setItem('replies', ssItem+selected);
+                if(id > 10){
+                    loadingScreen.style.display = 'block';
+                    setTimeout(() => {window.location.href = "result.html"; loadingScreen.style.display = 'none'}, Math.floor(Math.random() * (2700 - 1000) + 1000))
+                }
+                else{
+                    idElement.innerHTML = "<b>Вопрос: "+id+" / 10</b>";
+                    questionElement.innerHTML = question;
+                }
+            }
+        </script>
+        <script src="parallax.js"></script>
+    </body>
+</html>
