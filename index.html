@@ -10,25 +10,50 @@
 		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
 	</head>
 	<body>
-		<header>
-			<div class='nav-links'>
-				<span>Главная</span>
-				<a href="pages.html" class='nav-link'>Сайты</a>
-				<a href="contacts.html" class='nav-link'>Контакты</a>
-				<a href="friends.html" class='nav-link'>Друзья</a>
-			</div>	
-		</header>
 		<div class="page-content">
-			<div>
-				<p><b>Гутентаг!</b></p>
-				<p>Короче, это главная страница для всех моих сайтов. Отсюда можно попасть на любой из них. Сделать это можно на странице "Cайты". Ну впринципе хуй знает что тут еще написать, все и так понятно думаю но это не точно. Вообщем предупрежу - сайты хуйня, потому-что я нуб в этом деле и без инета ничего бы не смог ну или я слишком самокритичный. Вообщем все разъяснил, идите нахуй! :)</p>
-				<p>
-					Если обнаружили какие-то траблы или идеи или хотите меня персонально послать на три весёлые, то пишите на почту - <span class="hover-txt">habalyn228@outlook.com</span></p>
-				<hr>
-				<div class="dzhigitovka">
-					<h2>Джигитовка</h2>
+			<div class="error">
+				<h1>228</h1>
+				<p>Ошибка стоп 0 0 0 0 0 0 0 аааа!!</p>
+			</div>
+			<div class="text">
+				<p>Сайт находится на &laquo;техническом обслуживании&raquo;. <br> Пожалуйста, зайдите позже (т. е. никогда, т. к. я ленивейшая амёба из тех. что свет видывал).<br>Если вы отсюда хотели попасть на другой мой сайт, то ну блять удачи, чё могу сказать ☺<br>Как говорится: &laquo;Лох не мамонт &mdash; не вымрет!&raquo;.<br>Ждите...</p>
+			</div>
+			<div class="timer">
+				<p id='time'>Автор пинает хуи уже 0 дней, 0 часов, 0 минут и 0 секунд с начала обновления сайта.</p>
+			</div>
+			<div class="bottom">
+				<div class="button" id="buton-blyat">
+					<a href="#" title="Не советую нажимать!" onclick="mudak()">Послать автора</a>
 				</div>
 			</div>
 		</div>
 	</body>
+	<script>
+		let date1 = new Date(2023, 4, 18, 20, 49, 55);
+		let date2 = new Date();
+		let difference = Math.abs(date2 - date1);
+		let daysD = Math.floor(difference / (1000 * 60 * 60 * 24)); 
+		let hoursD = Math.floor(difference / (1000 * 60 * 60)) % 24; 
+		let minsD = Math.floor(difference / (1000 * 60)) % 60; 
+		let secsD = Math.floor(difference / 1000) % 60; 
+
+		let timer = setInterval(timerUpdate, 250);
+		let timerEl = document.getElementById("time");
+
+		function timerUpdate(){
+			date2 = new Date();
+			difference = Math.abs(date2 - date1);
+			daysD = Math.floor(difference / (1000 * 60 * 60 * 24)); 
+			hoursD = Math.floor(difference / (1000 * 60 * 60)) % 24; 
+			minsD = Math.floor(difference / (1000 * 60)) % 60; 
+			secsD = Math.floor(difference / 1000) % 60; 
+			timerEl.innerHTML = `Автор пинает хуи уже ${daysD} дней, ${hoursD} часов, ${minsD} минут и ${secsD} секунд с начала обновления сайта.`;
+		}
+
+		function mudak(){
+			let buton = document.getElementById("buton-blyat");
+			alert('Слышь хуйло, ты вообще берега попутал?! Чепуха ебаная, шелупень подзалупная, еще раз блять что-то подобное задумаешь, шелуха ебаная, я тебя буду долго иметь.. в очко. Тьфу бля, тоесть я не то хотел сказать... бля иди сам нахуй короче, шомпол блять!')
+			buton.outerHTML = "";
+		}
+	</script>
 </html>
