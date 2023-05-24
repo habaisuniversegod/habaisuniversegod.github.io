@@ -1,10 +1,11 @@
 
 body {
     margin: 0;
-    background-color: rgb(3, 22, 37);
+    background-color: rgb(105, 105, 105);
     color: white;
     background-image: url('background.png');
     background-size: 25%;
+    background-blend-mode: multiply;
 }
 
 .title {
@@ -14,7 +15,7 @@ body {
 h1 {
     font-family: 'Comfortaa', cursive;
     font-size: 48px;
-    padding: 20px 0 20px 0;
+    padding: 20px 0;
     transition: letter-spacing 0.3s ease-out;
 }
 h1.interactive:hover {
@@ -24,11 +25,11 @@ h1.interactive:hover {
 p {
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
-    margin: 25px auto;
+    margin: 10px auto;
 }
 
 .title p {
-    padding: 4% 0;
+    padding: 1.5% 0;
     width: 80%;
     line-height: 1.5em;
 }
@@ -40,7 +41,7 @@ p {
 
 .text-block {
     position: relative;
-    padding: 25px 0 25px 15px;
+    padding: 25px 0 20px 15px;
     background-color: rgb(16, 16, 16);
     z-index: 0;
 }
@@ -52,7 +53,7 @@ p {
 h2 {
     font-family: 'Exo 2', sans-serif;
     font-size: 28px;
-    margin: 20px 0 15px 0;
+    margin: 15px 0 15px 0;
 }
 
 .text-block p {
@@ -79,7 +80,6 @@ h2 {
 .test-form {
     margin: 0 auto;
     padding: 10% 0;
-    background-color: rgba(0, 0, 0, 0.45);
 }
 
 .button {
@@ -87,25 +87,24 @@ h2 {
     font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 700;
-    border: 4px solid white;
+    border-radius: 15px;
+    background-color: white;
+    color: black;
     width: 8em;
     text-align: center;
     margin: 0 auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.25s ease-in-out;
 }
 
 .button:hover {
-    background-color: white;
+    background-color: #5683ff;
+    color: white;
 }
 
 .button a {
-    color: white;
+    color: inherit;
     text-decoration: none;
     transition: inherit;
-}
-
-.button:hover a {
-    color: black;
 }
 
 .wrapper {
@@ -186,15 +185,15 @@ footer a:hover > span {
 }
 
 .form .button {
-    padding: 10px 40px;
+    padding: 12px 40px;
+    margin: 10px auto;
     font-family: 'Rubik', sans-serif;
     font-size: 20px;
     font-weight: 700;
-    border: 3px solid white;
-    width: 30%;
+    width: 35%;
     text-align: center;
     margin: 15px auto;
-    transition: all 0.3s ease-in-out;
+    transition: all 0.2s ease-in-out;
     cursor: pointer;
 }
 
@@ -229,7 +228,7 @@ footer a:hover > span {
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .loading .loading-title {
@@ -260,17 +259,14 @@ footer a:hover > span {
 
 @keyframes loading-anim {
     0% {
-        opacity: 100%;
         height: 20px;
         margin-top: 0px;
     }
     50% {
-        opacity: 50%;
-        height: 30px;
-        margin-top: -5px;
+        height: 34px;
+        margin-top: -7px;
     }
     100% {
-        opacity: 100%;
         height: 20px;
         margin-top: 0px;
     }
@@ -281,10 +277,11 @@ footer a:hover > span {
     width: 20px;
     height: 20px;
     background-color: white;
+    border-radius: 5px;
     animation-name: loading-anim;
-    animation-duration: 1s;
+    animation-duration: 0.6s;
     animation-iteration-count: infinite;
-    animation-timing-function: cubic-bezier(.55,.3,.18,.81);
+    animation-timing-function: cubic-bezier(.59,.27,.44,.69);
 }
 
 .element#e1 {
@@ -295,14 +292,14 @@ footer a:hover > span {
 
 .element#e2 {
     top: 10px;
-    left: 30px;
-    animation-delay: -333ms;
+    left: 28px;
+    animation-delay: -100ms;
 }
 
 .element#e3 {
     top: 10px;
-    left: 60px;
-    animation-delay: -666ms;
+    left: 56px;
+    animation-delay: -200ms;
 }
 
 .result-content {
@@ -315,6 +312,7 @@ footer a:hover > span {
 
 .result-content h2 {
     font-family: 'Exo 2';
+    font-size: 36px;
     margin: 15px 0 20px 0;
 }
 
@@ -339,9 +337,7 @@ footer a:hover > span {
 
 .descr {
     margin: 10px 5px 0 30%;
-    
 }
-
 #iq {
     font-family: 'Comfortaa', cursive;
     font-size: 48px;
@@ -357,7 +353,7 @@ footer a:hover > span {
     font-family: 'Rubik', sans-serif;
     font-size: 28px;
     font-weight: 500;
-    color: rgb(241, 86, 86);
+    color: rgb(230, 49, 49);
     text-decoration: none;
     transition: all 0.3s ease-in-out;
     
