@@ -1,76 +1,183 @@
 * {
-	margin: 0;
-	padding: 0;
+    --light-bg: #f2f2f2;
+    --light-txt-hovered: #64d5f8;
+    --header-bg: #27262e;
+    --footer-txt: #525252;
+    --footer-txt-hovered: #8a8a8a;
+    --text-dark: #161616;
+
+    margin: 0;
+    padding: 0;
 }
 
 body {
-	--background-madafaka: #0d0d0e;
-	--text-madafaka: #baf3eb;
-
-	background-color: #333;
-	background-image: url("tajik.png");
-	background-size: 33%;
-	background-blend-mode: multiply;
+    margin: 0;
+    padding: 0;
+    background-image: url('bg.png');
+    background-size: 30%;
+    background-repeat: repeat;
 }
 
-p, h1 {
-	color: var(--text-madafaka);
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--light-bg);
+    background-color: var(--header-bg);
+    margin: 0 auto;
+    width: 100%;
 }
 
-.page-content {
-	font-family: "Raleway", sans-serif;
+header .left {
+    position: absolute;
+    padding: 20px 0;
+    left: 0%;
+    width: 100%;
+    background-color: inherit;
 }
 
-.error {
-	margin: 50px 25px;
-	text-align: center;
-	font-weight: 600;
+header .right {
+    position: absolute;
+    text-align: right;
+    padding: 20px 0;
+    margin-right: 20px;
+    right: 0%;
+    width: auto;
+    background-color: inherit;
 }
 
-.error h1 {
-	font-size: 96px;
+header h1 {
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 700;
+    font-size: 26px;
+    letter-spacing: 0.5rem;
+    background-color: var(--header-bg);
+    transition: letter-spacing 400ms ease-in-out;
+    margin: 0 10px;
 }
 
-.error p {
-	font-size: 20px;
+header .icon {
+    position: relative;
+    font-family: 'Comfortaa', sans-serif;
+    font-weight: 500;
+    font-size: 26px;
+    margin: 0 15px;
+    background-color: inherit;
+    text-decoration: none;
+    color: inherit;
+    transition: color 250ms ease-in-out;
 }
 
-.text {
-	text-align: center;
-	font-size: 24px;
+header .icon::after {
+    content: "";
+    position: absolute;
+    background-color: var(--light-txt-hovered);
+    bottom: -6px;
+    left: 50%;
+    width: 0%;
+    height: 4px;
+    transition: all 300ms ease-out;
+    border-radius: 3px;
 }
 
-.bottom {
-	margin: 40px 0;
-	text-align: center;
+header .icon:hover::after {
+    width: 100%;
+    left: 0%;
 }
 
-.timer {
-	text-align: center;
-	margin: 45px auto;
-	font-size: 21px;
-	max-width: 45%;
+header .icon:hover {
+    color: var(--light-txt-hovered);
 }
 
-.button {
-	background-color: var(--text-madafaka);
-	color: #000;
-	border-radius: 10px;
-	width: fit-content;
-	padding: 20px;
-	margin: 10px auto;
-	transition: all 250ms ease-in-out;
+header .left h1:hover {
+    letter-spacing: 0.8rem;
 }
 
-.button:hover {
-	background-color: #267cdf;
-	color: var(--text-madafaka);
+
+.content {
+    position: relative;
+    width: 90%;
+    margin: 100px auto;
+    background-color: rgba(0,0, 0,0.15);
+    border-radius: 30px;
 }
 
-.button a {
-	font-size: 24px;
-	font-weight: 600;
-	color: inherit;
-	text-decoration: none;
+.paragraph {
+    padding: 35px 20px 35px 20px;
 }
 
+a, p, .content h2 {
+    position: relative;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--text-dark);
+}
+
+.content h2 {
+    font-weight: 500;
+    font-size: 28px;
+    border-left: 10px solid var(--text-dark);
+    padding-left: 5px;
+    margin: 8px 0;
+}
+
+.content li {
+    list-style: none;
+    padding-left: 2em;
+}
+
+.content li::before {
+    content: "•";
+    font-size: 28px;
+    margin-right: 10px;
+}
+
+.wrapper {
+   position: relative;
+    min-height: 100;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    background-color: var(--header-bg);
+    position: absolute;
+    left: 0;
+    bottom: -200px;
+}
+
+.ft-cnt {
+    padding: 20px;
+}
+
+footer a, footer p {
+    color: var(--footer-txt);
+    text-decoration: none;
+    margin: 5px 0;
+    transition: color 300ms ease-in-out;
+}
+
+footer a:hover {
+    color: var(--footer-txt-hovered)
+}
+
+footer .cpright {
+    position: absolute;
+    bottom: 5px;
+    margin-top: 20px;
+}
+
+footer .cpright::after {
+    position: absolute;
+    content: "";
+    top: -3px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: var(--footer-txt);
+}
+
+footer .light {
+    color: var(--footer-txt-hovered);
+}

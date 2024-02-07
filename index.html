@@ -1,59 +1,58 @@
+<!-- index.html // habaisuniversegod -->
+
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Главная</title>
-		<meta charset="utf-8">
-		<link rel="stylesheet" type="text/css" href="style.css">
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+    <head>
+        <meta charset="UTF-8">
+        <title>Главная</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@600&family=Ubuntu:wght@300&display=swap" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
 		<link rel="shortcut icon" href="icon.ico" type="image/x-icon">
-	</head>
-	<body>
-		<div class="page-content">
-			<div class="error">
-				<h1>228</h1>
-				<p>Ошибка стоп 0 0 0 0 0 0 0 аааа!!</p>
-			</div>
-			<div class="text">
-				<p>Сайт находится на &laquo;техническом обслуживании&raquo;. <br> Пожалуйста, зайдите позже (т. е. никогда, т. к. я ленивейшая амёба из тех. что свет видывал).<br>Если вы отсюда хотели попасть на другой мой сайт, то ну блять удачи, чё могу сказать ☺<br>Как говорится: &laquo;Лох не мамонт &mdash; не вымрет!&raquo;.<br>Ждите...</p>
-			</div>
-			<div class="timer">
-				<p id='time'>Автор пинает хуи уже 0 дней, 0 часов, 0 минут и 0 секунд с начала обновления сайта.</p>
-			</div>
-			<div class="bottom">
-				<div class="button" id="buton-blyat">
-					<a href="#" title="Не советую нажимать!" onclick="mudak()">Послать автора</a>
-				</div>
-			</div>
-		</div>
-	</body>
-	<script>
-		let date1 = new Date(2023, 4, 18, 20, 49, 55);
-		let date2 = new Date();
-		let difference = Math.abs(date2 - date1);
-		let daysD = Math.floor(difference / (1000 * 60 * 60 * 24)); 
-		let hoursD = Math.floor(difference / (1000 * 60 * 60)) % 24; 
-		let minsD = Math.floor(difference / (1000 * 60)) % 60; 
-		let secsD = Math.floor(difference / 1000) % 60; 
-
-		let timer = setInterval(timerUpdate, 250);
-		let timerEl = document.getElementById("time");
-
-		function timerUpdate(){
-			date2 = new Date();
-			difference = Math.abs(date2 - date1);
-			daysD = Math.floor(difference / (1000 * 60 * 60 * 24)); 
-			hoursD = Math.floor(difference / (1000 * 60 * 60)) % 24; 
-			minsD = Math.floor(difference / (1000 * 60)) % 60; 
-			secsD = Math.floor(difference / 1000) % 60; 
-			timerEl.innerHTML = `Автор пинает хуи уже ${daysD} дней, ${hoursD} часов, ${minsD} минут и ${secsD} секунд с начала обновления сайта.`;
-		}
-
-		function mudak(){
-			let buton = document.getElementById("buton-blyat");
-			alert('Слышь хуйло, ты вообще берега попутал?! Чепуха ебаная, шелупень подзалупная, еще раз блять что-то подобное задумаешь, шелуха ебаная, я тебя буду долго иметь.. в очко. Тьфу бля, тоесть я не то хотел сказать... бля иди сам нахуй короче, шомпол блять!')
-			buton.outerHTML = "";
-		}
-	</script>
+    </head>
+    <body>
+       
+        <header>
+            <div class="left">
+                <h1>HABAISUNIVERSEGOD.GITHUB.IO</h1>
+            </div>
+            <div class="right">
+                <a class="icon" href="#">Кто я?</a>
+                <a class="icon" href="#">Сайты</a>
+                <a class="icon" href="#">Френды</a>
+            </div>
+        </header>
+        <div class="wrapper">
+        <div class="content">
+            <div class="paragraph">
+                <h2>Ауфидерзейн!</h2>
+                <p>Короче, спустя дохуя времени, главная страница сайта теперь выглядит презентабельно. На самом деле, большую часть времени я тупо пинал хуи и не приступал к написанию новой главной страницы, что можно было лицезреть благодаря тому счётчику на сайте-плейсхолдере, на который я потратил определённое колличество своего времени, вместо того, чтобы хотя бы восстановить доступ к старой версии, но не суть. Короче, пока вкладки сверху нетыкабельные, это я сделаю потом... ну как потом... в следующем столетии.</p>
+            </div>
+            <div class="paragraph">
+                <h2>Что я такое?</h2>
+                <p>Я &ndash; habaisuniversegod, Бог всея вселенной, кодинга и веб-дизайна, покровитель человечества, Земли и Млечного Пути &ndash; кодер-любитель, веб-дизайнер-любитель, школотрон возраста 17 лет, просто пишу сайты для себя и нарабатываю опыт, чтобы в будущем понизить шансы побираться на помойках и хоть в чём-то по жизни преуспеть. Настоящее имя и фамилию вам знать не надо. Кто знает &ndash; тот знает, так что всё, тему закрыли. Живу в p̴̢̖̞͈̰̟̃̋̂i̴̪͚̹͈̓̂̅͂̅̓̈͋z̴̗̈̚d̶͍̗̝͂̊̔̌͑̀ȅ̴̺̫̦̲̣̌͒̂͆͒̚ẗ̷̨̲͕̦̯͍̼́̃͆̇̚̚v̶̺͎̬͚͙̹̀̈͜o̶͓͇̞̙͕̱̳̟̽͗͝͝e̵̡͍͎͗͂ͅÿ̸̺̬͔͗͘. Короче, если надо со мною связаться по вопросам улучшения и помощи в разработке <s>анального отверстия</s> моих сайтов, то писать на почту&nbsp;&ndash;&nbsp;<a href="habalyn228@outlook.com">habalyn228@outlook.com</a>. Если вы хотите написать по поводу того, чтобы разбить мой ебальник, то пишите в <a href="https://vk.com/habalyn228">VK</a> и я натравлю на вас спортиков... Шутка! Кто же сайты делать-то будет?</p>
+            </div>
+            <div class="paragraph">
+                <h2>Список сайтов</h2>
+                <p>Пока не сделал вкладки, всё тута.
+                    <ul>
+                        <li><a href="https://habaisuniversegod.github.io/mental">Mental - Угадаем ваше нутро!</a></li>
+                        <li><a href="https://habaisuniversegod.github.io/horoscope/">Самый правдивый гороскоп в мире!</a></li>
+                        <li><a href="https://habaisuniversegod.github.io/iqtest">IQ-тест - кто ты по жизни!</a></li>
+                    </ul>
+                </p>
+            </div>
+        </div>
+        
+        <footer>
+            <div class="ft-cnt">
+                <p>VK - <a href="https://vk.com/habalyn228">https://vk.com/habalyn228</a></p>
+                <p>Почта - <a href="habalyn228@outlook.com">habalyn228@outlook.com</a></p>
+                <p>GitHub - <a href="https://github.com/habaisuniversegod">https://github.com/habaisuniversegod</a></p>
+                <p class="cpright"><span class="light">habaisuniversegod 2024.</span> Никакие права не защищены, надпись ради формальности.</p>
+            </div>
+        </footer>
+        </div>
+    </body>
 </html>
