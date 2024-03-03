@@ -133,6 +133,23 @@ a, p, .content h2 {
     margin-right: 10px;
 }
 
+.content a {
+    transition: color 200ms ease-in-out;
+}
+
+.content a:hover {
+    color: #bb4242;
+}
+
+.ischezaet {
+    transition: opacity 200ms ease-in-out;
+    opacity: 100%;
+}
+
+a:hover > .ischezaet {
+    opacity: 0%;
+}
+
 .wrapper {
    position: relative;
     min-height: 100;
