@@ -5,6 +5,7 @@
     --footer-txt: #525252;
     --footer-txt-hovered: #8a8a8a;
     --text-dark: #161616;
+    --text-active: #ff2525;
 
     margin: 0;
     padding: 0;
@@ -68,6 +69,10 @@ header .icon {
     transition: color 250ms ease-in-out;
 }
 
+header .icon#active {
+    color: var(--footer-txt-hovered);
+}
+
 header .icon::after {
     content: "";
     position: absolute;
@@ -106,7 +111,7 @@ header .left h1:hover {
     padding: 35px 20px 35px 20px;
 }
 
-a, p, .content h2 {
+a, p, .content h2, li {
     position: relative;
     font-family: 'Ubuntu', sans-serif;
     font-weight: 300;
